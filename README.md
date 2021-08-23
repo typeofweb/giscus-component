@@ -7,7 +7,7 @@ Discussions. Currently available for React, Vue, and Svelte.
 
 ## Documentation
 
-See [the documentation for giscus](https://giscus.app).
+See [the documentation for giscus](https://giscus.typeofweb.com).
 
 ## Packages
 

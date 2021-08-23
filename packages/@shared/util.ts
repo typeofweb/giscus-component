@@ -1,7 +1,7 @@
 import { Giscus, Session } from './types'
 
 export const GISCUS_SESSION_KEY = 'giscus-session'
-export const GISCUS_ORIGIN = 'https://giscus.app'
+export const GISCUS_ORIGIN = 'https://giscus.typeofweb.com'
 const ERROR_SUGGESTION = `Please consider reporting this error at https://github.com/laymonage/giscus/issues/new.`
 
 export function formatError(message: string) {

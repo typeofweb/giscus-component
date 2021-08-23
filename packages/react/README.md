@@ -11,7 +11,7 @@ giscus is a lightweight comments widget built on GitHub issues, for blog comment
 
 ## ⚡ Quick view
 
-Follow the instructions on the [main website](https://giscus.app) and use the
+Follow the instructions on the [main website](https://giscus.typeofweb.com) and use the
 data attributes of the shown `<script>` tag as the props to the `Giscus`
 component.
 
