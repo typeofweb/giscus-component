@@ -28,7 +28,16 @@ export function getIframeSrc({
   session
 }: Giscus & Session) {
   const origin = location.href.replace(location.hash || '', '')
-  const description = getOgMetaContent('description')
+  const excerpt = getOgMetaContent('description')
+  const image = getOgMetaContent('image')
+
+  const description = image
+    ? `
+![](${encodeURI(image)})
+
+${excerpt}
+`.trim()
+    : excerpt
 
   const params: Record<string, string> = {
     origin,
