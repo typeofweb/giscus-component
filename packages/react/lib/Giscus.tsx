@@ -11,7 +11,7 @@ import {
 import IframeResizer from 'iframe-resizer-react'
 
 function GiscusClient(props: GiscusProps) {
-  const origin = location.href
+  const origin = location.href.replace(location.hash || '', '')
   const url = new URL(origin)
   const savedSession = localStorage.getItem(GISCUS_SESSION_KEY)
 

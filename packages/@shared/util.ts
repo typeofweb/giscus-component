@@ -9,10 +9,8 @@ export function formatError(message: string) {
 }
 
 export function getOgMetaContent(property: string) {
-  const element = (
-    document.querySelector(`meta[property='og:${property}']`) ||
-    document.querySelector(`meta[name='${property}']`)
-  ) as HTMLMetaElement
+  const element = (document.querySelector(`meta[property='og:${property}']`) ||
+    document.querySelector(`meta[name='${property}']`)) as HTMLMetaElement
 
   return element ? element.content : ''
 }
