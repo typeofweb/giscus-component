@@ -9,8 +9,9 @@ export function formatError(message: string) {
 }
 
 export function getOgMetaContent(property: string) {
-  const element = document.querySelector(
-    `meta[property='og:${property}'],meta[name='${property}']`
+  const element = (
+    document.querySelector(`meta[property='og:${property}']`) ||
+    document.querySelector(`meta[name='${property}']`)
   ) as HTMLMetaElement
 
   return element ? element.content : ''
@@ -28,7 +29,7 @@ export function getIframeSrc({
   emitMetadata = '0',
   session
 }: Giscus & Session) {
-  const origin = location.href
+  const origin = location.href.replace(location.hash || '', '')
   const description = getOgMetaContent('description')
 
   const params: Record<string, string> = {
